@@ -1,0 +1,20 @@
+{
+  "lint": {
+    "rules": {
+      "exclude": ["require-await"]
+    }
+  },
+  "fmt": {
+    "options": {
+      "singleQuote": true
+    }
+  },
+  "compilerOptions": {
+    "emitDecoratorMetadata": true
+  },
+  "importMap": "./import_map.json",
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read --allow-env --unstable run.ts",
+    "test": "deno test --allow-env --allow-net --allow-read -A --unstable spec"
+  }
+}

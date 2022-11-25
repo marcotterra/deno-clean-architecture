@@ -1,0 +1,10 @@
+{
+  "deno.enable": true,
+  "editor.defaultFormatter": "denoland.vscode-deno",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
+}

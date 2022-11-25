@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "~/": "./src/",
+    "danet/": "https://deno.land/x/danet@1.2.1/",
+    "1danet/": "./_danet/",
+    "dotenv/": "https://deno.land/std@0.166.0/dotenv/",
+    "mongo/": "https://deno.land/x/mongo@v0.31.1/",
+    "postgres/": "https://deno.land/x/postgres@v0.17.0/",
+    "@prisma/client/": "./prisma/client/"
+  }
+}
