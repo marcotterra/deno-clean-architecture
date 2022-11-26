@@ -1,4 +1,8 @@
-import { bootstrap } from './src/bootstrap.ts';
+import { Application } from './src/application/main.ts';
 
-const application = await bootstrap();
-await application.listen(Number(Deno.env.get('PORT') || 3000));
+async function run() {
+  const app = Application.build();
+  await app.run();
+}
+
+await run();

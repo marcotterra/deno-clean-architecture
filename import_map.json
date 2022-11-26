@@ -1,11 +1,15 @@
 {
   "imports": {
     "~/": "./src/",
-    "danet/": "https://deno.land/x/danet@1.2.1/",
-    "1danet/": "./_danet/",
-    "dotenv/": "https://deno.land/std@0.166.0/dotenv/",
-    "mongo/": "https://deno.land/x/mongo@v0.31.1/",
+    "danet/": "https://deno.land/x/danet@1.3.2/",
+    "dotenv/": "https://deno.land/std@0.170.0/dotenv/",
     "postgres/": "https://deno.land/x/postgres@v0.17.0/",
-    "@prisma/client/": "./prisma/client/"
+    "denodb/": "https://deno.land/x/denodb@v1.1.0/",
+    "bcrypt/": "https://deno.land/x/bcrypt@v0.4.1/",
+    "danet_swagger/": "https://deno.land/x/danet_swagger@1.2.1-alpha/",
+    "djwt/": "https://deno.land/x/djwt@v2.8/",
+    "class-validator": "https://esm.sh/class-validator@0.13.2?target=deno",
+    "class-transformer": "https://esm.sh/class-transformer@0.5.1?target=deno",
+    "cuid": "https://esm.sh/cuid@2.1.8?target=deno"
   }
 }

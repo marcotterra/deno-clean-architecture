@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    command: deno task dev
+    volumes:
+      - .:/usr/app
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    depends_on:
+      - postgres
+    environment:
+      DB_NAME: ${DB_NAME}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_SYNC: ${DB_SYNC}
+      APP_PORT: ${APP_PORT}
+      APP_JWT_KEY: ${APP_JWT_KEY}
+    networks:
+      - denocleanapi
+
+  postgres:
+    image: postgres:14-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - $HOME/workspace/.docker/volumes/postgres-14:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - denocleanapi
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 4040:8080
+    networks:
+      - denocleanapi
+
+networks:
+  denocleanapi:
